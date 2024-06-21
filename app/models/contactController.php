@@ -36,7 +36,7 @@ function sendEmail($nom,$adresse,$phone,$message,$email) {
         $mail->SMTPAuth = true;
         $mail->Username = 'ecoservicefrance33@gmail.com'; // Remplacez par votre email
         $mail->Password = 'dsyqastigkyghmpx'; // Remplacez par votre mot de passe
-        $mail->charset="utf-8";
+      
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
@@ -59,6 +59,7 @@ function sendEmail($nom,$adresse,$phone,$message,$email) {
 
         echo"<script>";
             echo"alert('message envoye avec succes');";
+            echo" window.location.href = '/ecoservices/public/home';";
        echo" </script>";
 
        header('Location: /ecoservices/public/home');

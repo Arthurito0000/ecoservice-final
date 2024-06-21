@@ -3,6 +3,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
+
 require '../vendor/PHPMailer/PHPMailer/src/Exception.php';
 require '../vendor/PHPMailer/PHPMailer/src/PHPMailer.php';
 require '../vendor/PHPMailer/PHPMailer/src/SMTP.php';
@@ -27,7 +28,7 @@ class DemandeModel {//ghfgfgfgfhgfgfg
         return $data;
     }
 
-    public function getProductById($id) {//fgfg
+    public function getProductById($id) {
         $query = "SELECT * FROM " . $this->table_name . " WHERE id = :id";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':id', $id);
@@ -88,7 +89,6 @@ class DemandeModel {//ghfgfgfgfhgfgfg
             $mail->SMTPAuth = true;
             $mail->Username = 'ecoservicefrance33@gmail.com'; // Remplacez par votre email
             $mail->Password = 'dsyqastigkyghmpx'; // Remplacez par votre mot de passe
-            $mail->charset="utf-8";
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
 

@@ -1,6 +1,6 @@
 <?php
 require_once('../models/Database.php');
-require_once('../models/DemandeModel.php');
+require_once('../controllers/demande_id_controller.php');
 
 // Initialiser l'objet Database
 $db = new Database();
@@ -11,7 +11,7 @@ $productId = isset($_GET['id']) ? $_GET['id'] : null;
 if ($productId) {
     $product = $demandeModel->getProductById($productId);
 } else {
-    echo "ID du produit manqut.";
+    echo "ID du produit manquant.";
     exit;
 }
 ?>
