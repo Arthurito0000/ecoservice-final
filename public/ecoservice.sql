@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `ecoservice`
 --
+DROP database if exists ecoservice;
+CREATE database if not exists ecoservice char set='utf8';
 
 -- --------------------------------------------------------
 
